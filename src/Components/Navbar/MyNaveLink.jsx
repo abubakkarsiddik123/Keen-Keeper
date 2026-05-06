@@ -7,7 +7,6 @@ import { PiChartLine } from "react-icons/pi";
 
 const MyNaveLink = () => {
   const pathName = usePathname();
-  console.log(pathName);
   return (
     <div className="">
       <ul className="flex items-center gap-4  font-medium text-[#64748B]">
