@@ -7,15 +7,15 @@ const ContextProvider = ({ children }) => {
   const [timeline, setTimeline] = useState([]);
 
   const value = {
-     timeline,
-     setTimeline,
+    timeline,
+    setTimeline,
   };
 
   return (
     <div>
       <FriendsContext.Provider value={value}>
         {children}
-        </FriendsContext.Provider>
+      </FriendsContext.Provider>
     </div>
   );
 };

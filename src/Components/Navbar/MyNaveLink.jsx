@@ -15,7 +15,6 @@ const MyNaveLink = () => {
             href="/"
             className={`flex items-center gap-1 ${pathName === "/" ? "bg-[#244D3F] font-semibold rounded-lg text-white py-3 px-4" : ""}`}
           >
-            
             <span>
               <BiHomeAlt2 />
             </span>
@@ -27,7 +26,6 @@ const MyNaveLink = () => {
             href="/timeline"
             className={`flex items-center gap-1 ${pathName === "/timeline" ? "bg-[#244D3F] font-semibold rounded-lg text-white py-3 px-4" : ""}`}
           >
-            
             <span>
               <IoTimeOutline />
             </span>
@@ -39,7 +37,6 @@ const MyNaveLink = () => {
             href="/stats"
             className={`flex items-center gap-1 ${pathName === "/stats" ? "bg-[#244D3F] font-semibold rounded-lg text-white py-3 px-4" : ""}`}
           >
-            
             <span>
               <PiChartLine />
             </span>

@@ -1,4 +1,4 @@
-#  KeenKeeper
+# KeenKeeper
 
 KeenKeeper is a modern friendship analytics dashboard that helps you track and visualize your interactions like calls, texts, and video chats in one place.
 
@@ -10,7 +10,7 @@ KeenKeeper lets you analyze your friendship activity through interactive charts 
 
 ---
 
-##  Technologies Used
+## Technologies Used
 
 - Next.js (App Router)
 - React.js
@@ -20,12 +20,10 @@ KeenKeeper lets you analyze your friendship activity through interactive charts 
 
 ---
 
-##  Key Features
+## Key Features
 
--  Track Call, Text, and Video interaction history  
--  Interactive Pie Charts for stats and analytics  
--  Filterable Timeline to view activity history  
--  Empty state handling for better user experience  
--  Fast, responsive, and modern UI design  
-
-
+- Track Call, Text, and Video interaction history
+- Interactive Pie Charts for stats and analytics
+- Filterable Timeline to view activity history
+- Empty state handling for better user experience
+- Fast, responsive, and modern UI design

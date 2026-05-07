@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "KeenKeeper | Friendship Tracker",
-  description: "KeenKeeper - Track your friendships, calls, texts, and video interactions easily",
+  description:
+    "KeenKeeper - Track your friendships, calls, texts, and video interactions easily",
 };
 
 export default function RootLayout({ children }) {
@@ -27,17 +28,13 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        
-        <NavBar/>
-         <ContextProvider>
-          <main>
-         {children}
-        </main>
-         </ContextProvider>
-           <ToastContainer position="top-center" />
-        <Footer/>
-
-        </body>
+        <NavBar />
+        <ContextProvider>
+          <main>{children}</main>
+        </ContextProvider>
+        <ToastContainer position="top-center" />
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -13,7 +13,7 @@ const Banner = () => {
             nurture the <br /> relationships that matter most.
           </p>
           <button className="btn bg-[#244D3F] text-white font-semibold rounded-lg py-3">
-            <IoIosAdd  className="text-2xl text-white"/>
+            <IoIosAdd className="text-2xl text-white" />
             Add a Friend
           </button>
         </div>
