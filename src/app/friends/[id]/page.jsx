@@ -1,7 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { FiPhoneCall } from "react-icons/fi";
 import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { LuArchive } from "react-icons/lu";
+import { MdOutlineTextsms, MdTextsms } from "react-icons/md";
+import { PiVideoCamera } from "react-icons/pi";
 import { RiDeleteBinLine } from "react-icons/ri";
 
 const friendsPromise = async () => {
@@ -15,10 +18,10 @@ const FriendDetails = async ({ params }) => {
   console.log(friends, "friendsPage");
   const { id } = await params;
   const friend = friends.find((friend) => friend.id === Number(id));
-  const { name, picture, tags, bio, email, status } = friend;
+  const { name, picture, tags, bio, email, status,days_since_contact,next_due_date,goal } = friend;
   console.log(friend, "friend find");
   return (
-    <main className="min-h-screen bg-[#f3f4f6] p-6 md:p-10">
+    <main className="min-h-screen p-6 md:p-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5">
         {/* LEFT SECTION */}
         <div className="space-y-4">
@@ -60,8 +63,8 @@ const FriendDetails = async ({ params }) => {
 
             {/* Preferred */}
             <div className="mt-5 bg-gray-100 px-4 py-2 rounded-full text-sm text-gray-600">
-              Preferred: email:{" "}
-              <span className="font-semibold text-gray-700">{email}</span>
+              Preferred: 
+              <span className="font-semibold text-gray-700"> {email}</span>
             </div>
           </div>
 
@@ -95,69 +98,69 @@ const FriendDetails = async ({ params }) => {
           {/* Top Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Days Since Contact */}
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 text-center">
-              <h2 className="text-5xl font-bold text-[#214f46]">62</h2>
+            <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-6 text-center">
+              <h2 className="text-3xl font-semibold text-[#244D3F]">{days_since_contact}</h2>
 
-              <p className="mt-3 text-gray-500">Days Since Contact</p>
+              <p className="mt-3 text-[#64748B]">Days Since Contact</p>
             </div>
 
             {/* Goal */}
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 text-center">
-              <h2 className="text-5xl font-bold text-[#214f46]">30</h2>
+            <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-6 text-center">
+              <h2 className="text-3xl font-semibold text-[#244D3F]">{goal}</h2>
 
-              <p className="mt-3 text-gray-500">Goal (Days)</p>
+              <p className="mt-3 text-[#64748B]">Goal (Days)</p>
             </div>
 
             {/* Next Due */}
-            <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 text-center">
-              <h2 className="text-3xl font-bold text-[#214f46]">
-                Feb 27, 2026
-              </h2>
+             <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-6 text-center">
+              <h2 className="text-3xl font-semibold text-[#244D3F]">{next_due_date}</h2>
 
-              <p className="mt-3 text-gray-500">Next Due</p>
+              <p className="mt-3 text-[#64748B]">Next Due</p>
             </div>
           </div>
 
           {/* Relationship Goal */}
-          <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6 flex items-center justify-between">
-            <div>
-              <h2 className="text-2xl font-bold text-[#214f46]">
+          <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-6">
+             <div className="flex justify-between">
+               <h2 className="text-xl font-medium text-[#244D3F]">
                 Relationship Goal
               </h2>
+              <button className="px-4 py-1  rounded-xl border border-gray-200  font-medium">
+              Edit
+            </button>
+             </div>
 
+            <div>
               <p className="mt-3 text-gray-600 text-lg">
                 Connect every{" "}
                 <span className="font-bold text-gray-800">30 days</span>
               </p>
             </div>
 
-            <button className="px-5 py-2 rounded-xl border border-gray-200 hover:bg-gray-50 transition font-medium">
-              Edit
-            </button>
+            
           </div>
 
           {/* Quick Check-In */}
-          <div className="bg-white rounded-3xl border border-gray-100 shadow-sm p-6">
-            <h2 className="text-2xl font-bold text-[#214f46] mb-6">
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">
+            <h2 className="text-xl font-medium text-[#244D3F] mb-6">
               Quick Check-In
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {/* Call */}
-              <button className="rounded-2xl border border-gray-200 py-10 hover:bg-gray-50 transition flex flex-col items-center gap-3">
-                <div className="w-16 h-16 rounded-2xl bg-green-100 flex items-center justify-center text-3xl">
-                  📞
+              <button className="cursor-pointer rounded-xl border border-gray-200 py-10 hover:bg-gray-50 transition flex flex-col items-center gap-3">
+                <div className="flex items-center justify-center text-3xl">
+                <FiPhoneCall />
                 </div>
-
                 <span className="font-semibold text-gray-700 text-lg">
                   Call
                 </span>
               </button>
 
               {/* Text */}
-              <button className="rounded-2xl border border-gray-200 py-10 hover:bg-gray-50 transition flex flex-col items-center gap-3">
-                <div className="w-16 h-16 rounded-2xl bg-blue-100 flex items-center justify-center text-3xl">
-                  💬
+              <button className="cursor-pointer rounded-xl border border-gray-200 py-10 hover:bg-gray-50 transition flex flex-col items-center gap-3">
+                <div className=" rounded-2xl  flex items-center justify-center text-3xl">
+                 <MdOutlineTextsms />
                 </div>
 
                 <span className="font-semibold text-gray-700 text-lg">
@@ -166,11 +169,10 @@ const FriendDetails = async ({ params }) => {
               </button>
 
               {/* Video */}
-              <button className="rounded-2xl border border-gray-200 py-10 hover:bg-gray-50 transition flex flex-col items-center gap-3">
-                <div className="w-16 h-16 rounded-2xl bg-purple-100 flex items-center justify-center text-3xl">
-                  🎥
+              <button className="cursor-pointer rounded-xl border border-gray-200 py-10 hover:bg-gray-50 transition flex flex-col items-center gap-3">
+                <div className=" rounded-2xl  flex items-center justify-center text-3xl">
+                  <PiVideoCamera />
                 </div>
-
                 <span className="font-semibold text-gray-700 text-lg">
                   Video
                 </span>
