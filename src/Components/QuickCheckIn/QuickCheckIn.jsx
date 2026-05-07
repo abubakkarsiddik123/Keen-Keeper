@@ -4,6 +4,7 @@ import { MdOutlineTextsms } from "react-icons/md";
 import { PiVideoCamera } from "react-icons/pi";
 import React, { useContext } from "react";
 import { FriendsContext } from "@/context/ContextProvider";
+import { toast } from "react-toastify";
 
 const QuickCheckIn = ({ name }) => {
   const { timeline, setTimeline } = useContext(FriendsContext);
@@ -18,6 +19,7 @@ const QuickCheckIn = ({ name }) => {
 
     // save to context
     setTimeline([...timeline, newActivity]);
+    toast.success(`${type} with ${name}`);
   };
   return (
     <div className="bg-white rounded-xl border border-gray-100 shadow-sm p-6">

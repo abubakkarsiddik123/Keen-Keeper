@@ -1,7 +1,6 @@
 import Card from "./Card";
 
 const FriendsCard = ({friends}) => {
-    console.log(friends);
     return (
         <div className="mt-16">
             <h2 className="text-2xl text-[#1F2937] font-semibold">Your Friends</h2>

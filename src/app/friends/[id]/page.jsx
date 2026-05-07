@@ -13,7 +13,6 @@ const friendsPromise = async () => {
 
 const FriendDetails = async ({ params }) => {
   const friends = await friendsPromise();
-  console.log(friends, "friendsPage");
   const { id } = await params;
   const friend = friends.find((friend) => friend.id === Number(id));
   const {

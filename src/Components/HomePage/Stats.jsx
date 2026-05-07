@@ -1,5 +1,3 @@
-
-
 const Stats = () => {
   const data = [
     { value: 10, title: "Total Friends" },
@@ -13,8 +11,12 @@ const Stats = () => {
       {data.map((item, i) => (
         <div key={i} className="stats shadow w-full sm:w-[250px]">
           <div className="stat text-center py-8">
-            <div className="stat-value text-[#244D3F] text-3xl font-semibold">{item.value}</div>
-            <div className="stat-title text-[#64748B] text-lg">{item.title}</div>
+            <div className="stat-value text-[#244D3F] text-3xl font-semibold">
+              {item.value}
+            </div>
+            <div className="stat-title text-[#64748B] text-lg">
+              {item.title}
+            </div>
           </div>
         </div>
       ))}
