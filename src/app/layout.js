@@ -2,7 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/Components/Navbar/NavBar";
 import Footer from "@/Components/Footer/Footer";
-import { FriendsContext } from "@/context/ContextProvider";
+import ContextProvider, { FriendsContext } from "@/context/ContextProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,9 +28,11 @@ export default function RootLayout({ children }) {
       <body className="min-h-full flex flex-col">
         
         <NavBar/>
-          <main className="bg-[#F8FAFC]">
-        <FriendsContext >{children}</FriendsContext>
+         <ContextProvider>
+          <main>
+         {children}
         </main>
+         </ContextProvider>
         <Footer/>
 
         </body>
