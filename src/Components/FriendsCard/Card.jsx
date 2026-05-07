@@ -1,10 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Card = ({friend}) => {
-    const {picture,name,days_since_contact,tags,status,}=friend;
+    const {id,picture,name,days_since_contact,tags,status,}=friend;
     return (
-        <div className="card bg-base-100 shadow-sm">
+        <Link href={`/friends/${id}`}>
+            <div className="card bg-base-100 shadow-sm">
   <figure className="pt-6">
     <Image src={picture} alt={name} width={80} height={80} className='rounded-full'></Image>
   </figure>
@@ -21,6 +23,7 @@ const Card = ({friend}) => {
 </div>
   </div>
 </div>
+        </Link>
     );
 };
 
