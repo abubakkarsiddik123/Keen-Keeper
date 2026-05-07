@@ -6,7 +6,7 @@
     "email": "arafat.rahman@gmail.com",
     "days_since_contact": 12,
     "status": "overdue",
-    "tags": ["college", "close friend"],
+    "tags": ["work"],
     "bio": "Met during college. We still talk about football and tech.",
     "goal": 10,
     "next_due_date": "2026-05-01"
@@ -18,7 +18,7 @@
     "email": "nusrat.jahan@gmail.com",
     "days_since_contact": 5,
     "status": "on-track",
-    "tags": ["school", "best friend"],
+    "tags": ["family"],
     "bio": "Childhood friend. Loves traveling and photography.",
     "goal": 14,
     "next_due_date": "2026-05-15"
@@ -30,7 +30,7 @@
     "email": "sabbir.hossain@gmail.com",
     "days_since_contact": 9,
     "status": "almost due",
-    "tags": ["work", "gym buddy"],
+    "tags": ["work"],
     "bio": "We work together and hit the gym regularly.",
     "goal": 10,
     "next_due_date": "2026-05-10"
@@ -54,7 +54,7 @@
     "email": "mim.akter@gmail.com",
     "days_since_contact": 3,
     "status": "on-track",
-    "tags": ["family", "cousin"],
+    "tags": [ "cousin"],
     "bio": "Cousin sister. We talk almost every week.",
     "goal": 7,
     "next_due_date": "2026-05-18"
@@ -66,7 +66,7 @@
     "email": "rakib.hasan@gmail.com",
     "days_since_contact": 11,
     "status": "almost due",
-    "tags": ["freelance", "client"],
+    "tags": [ "client"],
     "bio": "Met through freelancing. Now a good friend.",
     "goal": 12,
     "next_due_date": "2026-05-08"
@@ -90,7 +90,7 @@
     "email": "mehedi.hasan@gmail.com",
     "days_since_contact": 6,
     "status": "on-track",
-    "tags": ["gaming", "online friend"],
+    "tags": ["gaming"],
     "bio": "We play online games together every weekend.",
     "goal": 10,
     "next_due_date": "2026-05-16"
@@ -114,7 +114,7 @@
     "email": "shakib.alhasan@gmail.com",
     "days_since_contact": 2,
     "status": "on-track",
-    "tags": ["sports", "friend"],
+    "tags": ["sports"],
     "bio": "We play cricket together every Friday.",
     "goal": 7,
     "next_due_date": "2026-05-19"
