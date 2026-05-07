@@ -5,6 +5,13 @@ import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { LuArchive } from "react-icons/lu";
 import { RiDeleteBinLine } from "react-icons/ri";
 
+
+export const metadata = {
+  title: "Friend Details | KeenKeeper",
+  description:
+    "View detailed friendship interactions including calls, texts, and video history in KeenKeeper.",
+};
+
 const friendsPromise = async () => {
   const res = await fetch("http://localhost:3000/data.json");
   const data = await res.json();
