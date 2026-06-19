@@ -18,10 +18,10 @@ const friendsPromise = async () => {
 };
 
 const FriendDetails = async ({ params }) => {
-  console.log(params, "params is");
-  const friends = await friendsPromise();
   const { id } = await params;
-  const friend = friends.find((friend) => friend.id === Number(id));
+  const friends = await friendsPromise();
+  const friend = friends.find((friend) => friend.id === id);
+  console.log(friend);
   const {
     name,
     picture,
@@ -33,7 +33,7 @@ const FriendDetails = async ({ params }) => {
     next_due_date,
     goal,
   } = friend;
-  console.log(friend, "friend find");
+  console.log(name, "friend find");
   return (
     <main className="min-h-screen p-6 md:p-10">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5">
