@@ -5,7 +5,6 @@ import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { LuArchive } from "react-icons/lu";
 import { RiDeleteBinLine } from "react-icons/ri";
 
-
 export const metadata = {
   title: "Friend Details | KeenKeeper",
   description:
@@ -13,13 +12,13 @@ export const metadata = {
 };
 
 const friendsPromise = async () => {
-  const res = await fetch("https://keen-keeper-git-main-abu-bakkar.vercel.app/data.json");
+  const res = await fetch("https://keenkeeper-server.onrender.com/friends");
   const data = await res.json();
   return data;
 };
 
 const FriendDetails = async ({ params }) => {
-  console.log(params,"params is");
+  console.log(params, "params is");
   const friends = await friendsPromise();
   const { id } = await params;
   const friend = friends.find((friend) => friend.id === Number(id));
